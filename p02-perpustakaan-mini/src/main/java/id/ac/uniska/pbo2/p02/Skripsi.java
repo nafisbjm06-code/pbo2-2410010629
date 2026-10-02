@@ -5,34 +5,45 @@
 package id.ac.uniska.pbo2.p02;
 
 /**
- * Buku dapat dipinjam selama 7 hari dengan denda Rp1000 per hari keterlambatan.
+ *
+ * @author user
  */
-public class Buku extends Koleksi {
-
+public class Skripsi extends Koleksi {
     private final String penulis;
-
-    public Buku(String kode, String judul, int tahunTerbit, String penulis) {
+    private final String programStudi;
+    
+    public Skripsi(String kode, String judul, int tahunTerbit, String penulis, String programStudi) {
         super(kode, judul, tahunTerbit);
         this.penulis = penulis;
+        this.programStudi = programStudi;
+        
     }
-
+    
     public String getPenulis() {
         return penulis;
     }
-
+    
+    public String getProgramStudi() {
+        return programStudi;
+    }
+    
     @Override
     public int batasHariPinjam() {
-        return 7;
+        return 0;
     }
-
+    
+    @Override
+    public boolean pinjam() {
+        return false;
+    }
+    
     @Override
     public long hitungDenda(int hariTerlambat) {
-        return hariTerlambat * 1000L;
+        return hariTerlambat * 0L;
     }
 
     @Override
     public String keterangan() {
-        return "Buku karya " + penulis;
+        return penulis  + programStudi;
     }
 }
-    
