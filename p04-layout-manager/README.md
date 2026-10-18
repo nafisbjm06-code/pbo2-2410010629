@@ -17,6 +17,7 @@
 
 ## Foto sketsa form dan tabel rancangan
 
+
 | Bagian    | Panel       | Layout             |
 |-----------|-------------|--------------------|
 | Jendela   | JFrame      | Border Layout      |
@@ -34,3 +35,10 @@
 
 
 ## Deklarasi penggunaan AI: sebutkan alat yang dipakai dan untuk keperluan apa, atau buat pernyataan jika tidak memakai AI
+buatkan kode readme untuk membuat tabel seperti berikut
+| Bagian   | Panel  | Layout |
+|----------|--------|--------|
+| Jendela  | JFrame |        |
+| Header   |        |        |
+| Isi form |        |        |
+| Tombol   |        |        |
