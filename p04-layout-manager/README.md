@@ -20,7 +20,7 @@
 | Bagian   | Panel  | Layout |
 |----------|--------|--------|
 | Jendela  | JFrame |        |
-| Header   |        |        |
+| Header   | headerPanel       |        |
 | Isi form |        |        |
 | Tombol   |        |        |
 
