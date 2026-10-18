@@ -34,7 +34,7 @@
 ## Satu tangkapan layar (screenshot) tab Design FormAnggotaPerpustakaan yang memperlihatkan susunan panel dan layout di jendela Navigator
 <img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/bc092115-ebb6-42ff-89d2-4d2438647786" />
 
-## Jawaban eksperimen Praktikum 2 dan Praktikum 4, serta saran dari teman pada Tahap 4
+## Jawaban eksperimen Praktikum 2, serta saran dari teman pada Tahap 4
 1. Pada flowPanel, ubah Alignment layout menjadi Center, lalu kecilkan jendela. Apa yang berubah? Baris
 mana di initComponents() yang ikut berubah?
 = Tombol berada di tengah dan bisa pindah baris saat jendela diperkecil. Baris yang berubah adalah pengaturan FlowLayout menjadi FlowLayout.CENTER.
@@ -47,13 +47,20 @@ tinggi tombol. Bagaimana lebar tombol berubah? Tambahkan juga Vertical Strut dar
 antara tombol.
 = Setelah maximumSize diatur dengan lebar 32767 dan tinggi sesuai tinggi tombol, tombol dapat melebar mengikuti ruang yang tersedia. Jika ditambahkan Vertical Strut di antara tombol, akan muncul jarak vertikal tetap di antara tombol sehingga susunannya terlihat lebih renggang.
 
+## Jawaban Praktikum 4
 1. Ubah Weight X pada namaField menjadi 0.0, lalu lebarkan jendela. Apa yang terjadi pada isian?
+   = Isian nama tidak melebar saat jendela diperbesar karena tidak mendapat tambahan ruang horizontal.
    
 2. Ubah Direction formPanel di dalam isiPanel dari North menjadi Center, lalu tinggikan jendela. Apa
 perbedaannya?
+= Form berpindah ke bagian tengah secara vertikal, berbeda dengan North yang menempatkan form di bagian atas.
 
 3. Hapus baris setMinimumSize(getSize()) di konstruktor, lalu kecilkan jendela sekecil mungkin. Bagian
 mana yang rusak lebih dulu?
+= Jendela bisa diperkecil terlalu kecil. Bagian form dan komponennya mulai bertumpuk atau terpotong sehingga sulit digunakan.
+
+## Saran dari teman pada Tahap 4
+
 
 ## Deklarasi penggunaan AI: sebutkan alat yang dipakai dan untuk keperluan apa, atau buat pernyataan jika tidak memakai AI
 buatkan kode readme untuk membuat tabel seperti berikut
