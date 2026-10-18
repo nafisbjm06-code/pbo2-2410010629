@@ -39,7 +39,7 @@
 mana di initComponents() yang ikut berubah?
 = Tombol berada di tengah dan bisa pindah baris saat jendela diperkecil. Baris yang berubah adalah pengaturan FlowLayout menjadi FlowLayout.CENTER.
 
-3. Pada gridPanel, ubah Rows menjadi 0 dan Columns menjadi 2. Berapa baris yang terbentuk dan mengapa? 
+2. Pada gridPanel, ubah Rows menjadi 0 dan Columns menjadi 2. Berapa baris yang terbentuk dan mengapa? 
    = Terbentuk 3 baris jika ada 6 komponen, karena 2 kolom diisi secara otomatis oleh GridLayout.
    
 3. Pada boxPanel, isi properti maximumSize keempat tombol dengan lebar 32767 dan tinggi sama dengan
