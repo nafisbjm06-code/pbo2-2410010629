@@ -60,7 +60,7 @@ mana yang rusak lebih dulu?
 = Jendela bisa diperkecil terlalu kecil. Bagian form dan komponennya mulai bertumpuk atau terpotong sehingga sulit digunakan.
 
 ## Saran dari teman pada Tahap 4
-
+Tampilan form sudah bagus, rapi, dan konsisten. Susunan komponen juga sudah sesuai dan tetap rapi saat jendela diperbesar.
 
 ## Deklarasi penggunaan AI: sebutkan alat yang dipakai dan untuk keperluan apa, atau buat pernyataan jika tidak memakai AI
 buatkan kode readme untuk membuat tabel seperti berikut
