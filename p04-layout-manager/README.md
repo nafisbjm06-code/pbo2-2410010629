@@ -17,12 +17,13 @@
 
 ## Foto sketsa form dan tabel rancangan
 
-| Bagian   | Panel  | Layout |
-|----------|--------|--------|
-| Jendela  | JFrame |        |
-| Header   | headerPanel       |        |
-| Isi form |        |        |
-| Tombol   |        |        |
+| Bagian    | Panel       | Layout             |
+|-----------|-------------|--------------------|
+| Jendela   | JFrame      | Border Layout      |
+| Header    | headerPanel | Box Layout, Y axis |
+| Pembungkus| isiPanel    | Border Layout      |
+| Isi form  | formPanel   | Grid Bag Layout    |
+| Tombol    | tombolPanel | Flow Layout,Right  |
 
 ## Dua tangkapan layar (screenshot) FormAnggotaPerpustakaan saat dijalankan: ukuran awal dan saat dilebarkan
 <img width="1916" height="1021" alt="image" src="https://github.com/user-attachments/assets/9a44e7c7-0fea-469f-a31f-251a2866035e" />
