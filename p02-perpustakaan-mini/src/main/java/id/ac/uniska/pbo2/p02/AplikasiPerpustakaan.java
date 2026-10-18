@@ -5,7 +5,7 @@
 package id.ac.uniska.pbo2.p02;
 
 /**
- * Menjalankan skenario peminjaman dan pengembalian pada Perpustakaan Mini.
+ * Menjalankan skenario peminjaman  dan pengembalian pada Perpustakaan Mini.
  */
 public class AplikasiPerpustakaan {
 
