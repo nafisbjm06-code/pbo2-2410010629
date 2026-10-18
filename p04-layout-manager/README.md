@@ -17,6 +17,13 @@
 
 ## Foto sketsa form dan tabel rancangan
 
+| Bagian   | Panel  | Layout |
+|----------|--------|--------|
+| Jendela  | JFrame |        |
+| Header   |        |        |
+| Isi form |        |        |
+| Tombol   |        |        |
+
 ## Dua tangkapan layar (screenshot) FormAnggotaPerpustakaan saat dijalankan: ukuran awal dan saat dilebarkan
 <img width="1916" height="1021" alt="image" src="https://github.com/user-attachments/assets/9a44e7c7-0fea-469f-a31f-251a2866035e" />
 <img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/24bc5d62-378b-40c7-a5c4-9b922b1f03bb" />
