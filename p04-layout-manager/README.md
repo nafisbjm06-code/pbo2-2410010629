@@ -16,6 +16,7 @@
   Alignment: Label dan kolom input dibuat sejajar agar form terlihat rapi dan mudah digunakan.
 
 ## Foto sketsa form dan tabel rancangan
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/8e632ef8-a728-47d5-a489-8aaa530ff31d" />
 
 
 | Bagian    | Panel       | Layout             |
@@ -33,6 +34,23 @@
 ## Satu tangkapan layar (screenshot) tab Design FormAnggotaPerpustakaan yang memperlihatkan susunan panel dan layout di jendela Navigator
 <img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/bc092115-ebb6-42ff-89d2-4d2438647786" />
 
+## Jawaban eksperimen Praktikum 2 dan Praktikum 4, serta saran dari teman pada Tahap 4
+1. Pada flowPanel, ubah Alignment layout menjadi Center, lalu kecilkan jendela. Apa yang berubah? Baris
+mana di initComponents() yang ikut berubah?
+
+2. Pada gridPanel, ubah Rows menjadi 0 dan Columns menjadi 2. Berapa baris yang terbentuk dan mengapa?
+   
+3. Pada boxPanel, isi properti maximumSize keempat tombol dengan lebar 32767 dan tinggi sama dengan
+tinggi tombol. Bagaimana lebar tombol berubah? Tambahkan juga Vertical Strut dari kategori Swing Fillers di
+antara tombol.
+
+1. Ubah Weight X pada namaField menjadi 0.0, lalu lebarkan jendela. Apa yang terjadi pada isian?
+   
+2. Ubah Direction formPanel di dalam isiPanel dari North menjadi Center, lalu tinggikan jendela. Apa
+perbedaannya?
+
+3. Hapus baris setMinimumSize(getSize()) di konstruktor, lalu kecilkan jendela sekecil mungkin. Bagian
+mana yang rusak lebih dulu?
 
 ## Deklarasi penggunaan AI: sebutkan alat yang dipakai dan untuk keperluan apa, atau buat pernyataan jika tidak memakai AI
 buatkan kode readme untuk membuat tabel seperti berikut
