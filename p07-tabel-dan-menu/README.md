@@ -2,7 +2,7 @@
 1. Di KontakTableModel, jadikan baris fireTableRowsInserted(baris, baris); sebagai komentar, lalu tambah kontak baru. Apakah tabel langsung berubah?
 Jawaban: Tidak, tabel tidak langsung berubah karena fireTableRowsInserted() berfungsi memberi tahu JTable bahwa ada data baru. Jika baris tersebut dijadikan komentar, data tetap masuk ke List, tetapi tampilan tabel tidak otomatis diperbarui.
 2. Di method barisTerpilih, ganti isinya menjadi return kontakTable.getSelectedRow();. Cari kata "ah", pilih Ahmad Fauzi, lalu klik Hapus dan pilih No. Nama siapa yang muncul di dialog konfirmasi?
-Jawaban: Nama yang muncul adalah Budi Santoso. Hal ini karena getSelectedRow() mengambil nomor baris tampilan, bukan nomor baris asli pada model. Setelah pencarian, urutan baris berubah sehingga data yang terbaca menjadi salah.
+Jawaban: Nama yang muncul adalah Siti rahmah dan Nur aisyah.
 3. Di konstruktor DialogKontak, ubah super(pemilik, judul, true) menjadi false. Saat dialog terbuka, coba klik jendela utama. Apa yang terjadi pada kontak yang ditambahkan?
 Jawaban: Jendela utama tetap bisa diklik meskipun dialog masih terbuka. Namun, kontak yang ditambahkan tidak langsung masuk ke tabel karena dialog tidak lagi bersifat modal. Method tampilkan() langsung mengembalikan hasil sebelum pengguna selesai mengisi dan menyimpan data.
 4. Tekan Ctrl+N, Ctrl+E, dan Ctrl+D. Mengapa Ctrl+E dan Ctrl+D tidak bekerja saat tidak ada baris yang dipilih?
