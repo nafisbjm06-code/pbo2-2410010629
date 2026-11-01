@@ -210,7 +210,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(npmField, gridBagConstraints);
 
-        prodiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Informatika", "Sistem Informasi" }));
+        prodiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kategori", "Informatika", "Sistem Informasi", "Manajemen Informatika" }));
         prodiCombo.addItemListener(this::prodiComboItemStateChanged);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
