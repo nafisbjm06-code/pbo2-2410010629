@@ -75,7 +75,7 @@ public class AplikasiKatalogBuku extends javax.swing.JFrame {
         tentangItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Daftar Kontak");
+        setTitle("Katalog Buku");
 
         atasPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 4, 8, 12));
         atasPanel.setLayout(new java.awt.BorderLayout(8, 0));
