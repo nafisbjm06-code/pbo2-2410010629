@@ -1,18 +1,9 @@
-# Tabel singkat berisi temuan dari teman, perbaikan yang Anda lakukan, dan commit yang memuat perbaikan tersebut
-| No | Heuristik | Temuan | Skor 0-4 | Saran |
-|:---:|---|---|:---:|---|
-| 1 | Visibilitas status sistem | Aplikasi berjalan dengan baik, tetapi ketika data yang baru didaftarkan, alangkah baiknya semua isian termasuk radiobutton juga dikosongkan kembali. | 1 | Perbaiki tombol batal untuk radiobutton. |
-| 2 | Kesesuaian dengan dunia nyata | Tulisan dan isian terlihat dengan jelas dan rapi. | 0 | - |
-| 3 | Kendali dan kebebasan pengguna | Terdapat 1 masalah, ketika ingin menambahkan data yang baru, isian pada combobox "Informatika" tidak bisa didaftarkan. | 2 | Perbaiki combobox isian "Informatika" agar segera bisa didaftarkan. |
-| 4 | Konsistensi dan standar | Halaman form masih terlihat konsisten ketika dikecilkan dan dilebarkan. | 0 | - |
-| 5 | Pencegahan kesalahan | NPM dan nomor sudah tidak bisa dimasukkan data berupa huruf. Ketika nama dan email diisi tidak sesuai ketentuan, akan muncul pesan peringatan singkat. | 0 | - |
-| 6 | Mengenali, bukan mengingat | Pengguna dipastikan mudah beradaptasi karena tampilan terlihat rapi dan mudah dikenali. | 0 | - |
-| 7 | Fleksibilitas dan efisiensi | Tidak ada kendala. | 0 | - |
-| 8 | Desain estetis dan minimalis | Letak label dan isian enak dilihat. | 0 | - |
-| 9 | Membantu memperbaiki kesalahan | Terdapat pesan error kalau isian tidak sesuai ketentuan, sangat memudahkan pengguna. | 0 | - |
-| 10 | Bantuan dan dokumentasi | Terdapat pesan error bantuan berupa pesan singkat isian mana saja yang harus diperbaiki. | 0 | - |
+# Lembar per review heuristik dari teman
+nama Peninjau : Muhammad Arifin Ikhsan
 
-Nama peninjau: Muhammad Arifin Ikhsan Nama pemilik form: Muhammad Nafis
+nama Pemilik Form : Muhammad Nafis
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/ca6734f3-37ae-4373-9b9a-01e6c74ecbf3" />
+
 
 # Tangkapan layar (screenshot) form dengan pesan kesalahan;
 <img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/26476845-b111-4ba3-a8ef-77be4ccf8bd0" />
