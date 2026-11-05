@@ -51,7 +51,7 @@ public class NilaiMahasiswa {
         return nilaiTugas + nilaiUts + nilaiUas;
     }
 
-    public String getNilaiHuruf() {
+    public String getNilaiBobot() {
         double hasil = getNilaiAkhir();
         String grade;
 

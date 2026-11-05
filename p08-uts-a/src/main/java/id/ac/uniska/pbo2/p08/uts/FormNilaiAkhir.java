@@ -1,22 +1,44 @@
+//Nama  : Muhammad Nafis
+//NPM   : 2410010629
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package id.ac.uniska.pbo2.p08.uts;
 
+import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Color;
+
 /**
  *
  * @author user
  */
 public class FormNilaiAkhir extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormNilaiAkhir.class.getName());
+  
 
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormNilaiAkhir.class.getName());
+            private java.util.List<NilaiMahasiswa> daftarMahasiswa
+        = new java.util.ArrayList<>();
     /**
      * Creates new form FormNilaiAkhir
      */
     public FormNilaiAkhir() {
         initComponents();
+        pesanLabel.setForeground(warnaKesalahan());
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object[][]{},
+            new String[]{
+                "NPM",
+                "Nama",
+                "Tugas",
+                "UTS",
+                "UAS",
+                "Nilai Akhir",
+                "Bobot"
+            }
+    ));
+        
     }
 
     /**
@@ -28,47 +50,277 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        kiriPanel = new javax.swing.JPanel();
+        isianPanel = new javax.swing.JPanel();
+        npmLabel = new javax.swing.JLabel();
+        npmField = new javax.swing.JTextField();
+        namaLabel = new javax.swing.JLabel();
+        namaField = new javax.swing.JTextField();
+        tugasLabel = new javax.swing.JLabel();
+        tugasField = new javax.swing.JTextField();
+        utsLabel = new javax.swing.JLabel();
+        utsField = new javax.swing.JTextField();
+        uasLabel = new javax.swing.JLabel();
+        uasField = new javax.swing.JTextField();
+        kontrolPanel = new javax.swing.JPanel();
+        pesanLabel = new javax.swing.JLabel();
+        tombolPanel = new javax.swing.JPanel();
+        simpanButton = new javax.swing.JButton();
+        bersihkanButton = new javax.swing.JButton();
+        freePanel = new javax.swing.JPanel();
+        kananPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        kiriPanel.setLayout(new java.awt.BorderLayout());
+
+        isianPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        isianPanel.setLayout(new java.awt.GridLayout(0, 2, 0, 8));
+
+        npmLabel.setText("NPM");
+        isianPanel.add(npmLabel);
+
+        npmField.addActionListener(this::npmFieldActionPerformed);
+        isianPanel.add(npmField);
+
+        namaLabel.setText("Nama");
+        isianPanel.add(namaLabel);
+        isianPanel.add(namaField);
+
+        tugasLabel.setText("Nilai Tugas");
+        isianPanel.add(tugasLabel);
+        isianPanel.add(tugasField);
+
+        utsLabel.setText("Nilai UTS");
+        isianPanel.add(utsLabel);
+
+        utsField.addActionListener(this::utsFieldActionPerformed);
+        isianPanel.add(utsField);
+
+        uasLabel.setText("Nilai UAS");
+        isianPanel.add(uasLabel);
+        isianPanel.add(uasField);
+
+        kiriPanel.add(isianPanel, java.awt.BorderLayout.NORTH);
+
+        kontrolPanel.setLayout(new java.awt.BorderLayout());
+
+        pesanLabel.setText(" ");
+        kontrolPanel.add(pesanLabel, java.awt.BorderLayout.PAGE_START);
+
+        tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        simpanButton.setText("Simpan");
+        simpanButton.addActionListener(this::simpanButtonActionPerformed);
+        tombolPanel.add(simpanButton);
+
+        bersihkanButton.setText("Bersihkan");
+        bersihkanButton.addActionListener(this::bersihkanButtonActionPerformed);
+        tombolPanel.add(bersihkanButton);
+
+        kontrolPanel.add(tombolPanel, java.awt.BorderLayout.WEST);
+
+        kiriPanel.add(kontrolPanel, java.awt.BorderLayout.LINE_END);
+
+        javax.swing.GroupLayout freePanelLayout = new javax.swing.GroupLayout(freePanel);
+        freePanel.setLayout(freePanelLayout);
+        freePanelLayout.setHorizontalGroup(
+            freePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 267, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        freePanelLayout.setVerticalGroup(
+            freePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        kiriPanel.add(freePanel, java.awt.BorderLayout.SOUTH);
+
+        getContentPane().add(kiriPanel, java.awt.BorderLayout.WEST);
+
+        kananPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        kananPanel.setLayout(new java.awt.BorderLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        kananPanel.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(kananPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void utsFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_utsFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_utsFieldActionPerformed
+
+    private void npmFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_npmFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_npmFieldActionPerformed
+
+    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
+        simpan();
+    }//GEN-LAST:event_simpanButtonActionPerformed
+
+    private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanButtonActionPerformed
+        bersihkan();
+    }//GEN-LAST:event_bersihkanButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        FlatLightLaf.setup();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new FormNilaiAkhir().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bersihkanButton;
+    private javax.swing.JPanel freePanel;
+    private javax.swing.JPanel isianPanel;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JPanel kananPanel;
+    private javax.swing.JPanel kiriPanel;
+    private javax.swing.JPanel kontrolPanel;
+    private javax.swing.JTextField namaField;
+    private javax.swing.JLabel namaLabel;
+    private javax.swing.JTextField npmField;
+    private javax.swing.JLabel npmLabel;
+    private javax.swing.JLabel pesanLabel;
+    private javax.swing.JButton simpanButton;
+    private javax.swing.JPanel tombolPanel;
+    private javax.swing.JTextField tugasField;
+    private javax.swing.JLabel tugasLabel;
+    private javax.swing.JTextField uasField;
+    private javax.swing.JLabel uasLabel;
+    private javax.swing.JTextField utsField;
+    private javax.swing.JLabel utsLabel;
     // End of variables declaration//GEN-END:variables
+
+    private void simpan() {
+        String npm = npmField.getText().trim();
+        String nama = namaField.getText().trim();
+
+        // Validasi NPM harus 10 digit angka
+        if (!npm.matches("\\d{10}")) {
+            pesanLabel.setText("NPM harus 10 digit angka");
+            npmField.requestFocusInWindow();
+            return;
+        }
+
+        // Validasi NPM tidak boleh sama
+        for (NilaiMahasiswa mhs : daftarMahasiswa) {
+            if (mhs.getNpm().equals(npm)) {
+                pesanLabel.setText("NPM " + npm + " sudah terdaftar");
+                npmField.requestFocusInWindow();
+                return;
+            }
+        }
+
+        // Validasi nama
+        if (nama.isEmpty()) {
+            pesanLabel.setText("Nama wajib diisi");
+            namaField.requestFocusInWindow();
+            return;
+        }
+
+        int tugas, uts, uas;
+
+        // Validasi nilai tugas
+        try {
+            tugas = Integer.parseInt(tugasField.getText().trim());
+            if (tugas < 0 || tugas > 100) {
+                throw new NumberFormatException();
+            }
+        } catch (NumberFormatException e) {
+            pesanLabel.setText("Nilai tugas harus angka bulat 0 sampai 100");
+            tugasField.requestFocusInWindow();
+            return;
+        }
+
+        // Validasi nilai UTS
+        try {
+            uts = Integer.parseInt(utsField.getText().trim());
+            if (uts < 0 || uts > 100) {
+                throw new NumberFormatException();
+            }
+        } catch (NumberFormatException e) {
+            pesanLabel.setText("Nilai UTS harus angka bulat 0 sampai 100");
+            utsField.requestFocusInWindow();
+            return;
+        }
+
+        // Validasi nilai UAS
+        try {
+            uas = Integer.parseInt(uasField.getText().trim());
+            if (uas < 0 || uas > 100) {
+                throw new NumberFormatException();
+            }
+        } catch (NumberFormatException e) {
+            pesanLabel.setText("Nilai UAS harus angka bulat 0 sampai 100");
+            uasField.requestFocusInWindow();
+            return;
+        }
+
+        // Simpan jika semua data valid
+        
+        NilaiMahasiswa mahasiswa = new NilaiMahasiswa(
+                npm, nama, tugas, uts, uas
+        );
+
+        daftarMahasiswa.add(mahasiswa);
+        
+        javax.swing.table.DefaultTableModel model =
+                (javax.swing.table.DefaultTableModel)
+                jTable1.getModel();
+
+        model.addRow(new Object[]{
+            mahasiswa.getNpm(),
+            mahasiswa.getNama(),
+            mahasiswa.getTugas(),
+            mahasiswa.getUts(),
+            mahasiswa.getUas(),
+            mahasiswa.getNilaiAkhir(),
+            mahasiswa.getNilaiBobot()
+        });
+    
+
+
+        javax.swing.JOptionPane.showMessageDialog(
+                this, "Data berhasil disimpan"
+        );
+
+        bersihkan();
+
+    }
+
+    private void bersihkan() {
+        npmField.setText("");
+        namaField.setText("");
+        tugasField.setText("");
+        utsField.setText("");
+        uasField.setText("");
+
+        pesanLabel.setText("");
+        npmField.requestFocusInWindow();
+    }
+    
+    static Color warnaKesalahan() {
+        return FlatLaf.isLafDark() ? new Color(0xFF8A80) : new Color(0xC62828);
+    }
 }
