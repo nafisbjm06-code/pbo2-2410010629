@@ -58,9 +58,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="npmField">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="npmFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="namaLabel">
               <Properties>
@@ -82,9 +79,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="utsField">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="utsFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="uasLabel">
               <Properties>

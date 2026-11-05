@@ -25,6 +25,8 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
      */
     public FormNilaiAkhir() {
         initComponents();
+        getRootPane().setDefaultButton(simpanButton);
+        
         pesanLabel.setForeground(warnaKesalahan());
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object[][]{},
@@ -81,8 +83,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
 
         npmLabel.setText("NPM");
         isianPanel.add(npmLabel);
-
-        npmField.addActionListener(this::npmFieldActionPerformed);
         isianPanel.add(npmField);
 
         namaLabel.setText("Nama");
@@ -95,8 +95,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
 
         utsLabel.setText("Nilai UTS");
         isianPanel.add(utsLabel);
-
-        utsField.addActionListener(this::utsFieldActionPerformed);
         isianPanel.add(utsField);
 
         uasLabel.setText("Nilai UAS");
@@ -162,14 +160,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void utsFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_utsFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_utsFieldActionPerformed
-
-    private void npmFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_npmFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_npmFieldActionPerformed
-
     private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
         simpan();
     }//GEN-LAST:event_simpanButtonActionPerformed
@@ -216,14 +206,12 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
         String npm = npmField.getText().trim();
         String nama = namaField.getText().trim();
 
-        // Validasi NPM harus 10 digit angka
         if (!npm.matches("\\d{10}")) {
             pesanLabel.setText("NPM harus 10 digit angka");
             npmField.requestFocusInWindow();
             return;
         }
 
-        // Validasi NPM tidak boleh sama
         for (NilaiMahasiswa mhs : daftarMahasiswa) {
             if (mhs.getNpm().equals(npm)) {
                 pesanLabel.setText("NPM " + npm + " sudah terdaftar");
@@ -232,7 +220,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
             }
         }
 
-        // Validasi nama
         if (nama.isEmpty()) {
             pesanLabel.setText("Nama wajib diisi");
             namaField.requestFocusInWindow();
@@ -241,7 +228,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
 
         int tugas, uts, uas;
 
-        // Validasi nilai tugas
         try {
             tugas = Integer.parseInt(tugasField.getText().trim());
             if (tugas < 0 || tugas > 100) {
@@ -253,7 +239,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
             return;
         }
 
-        // Validasi nilai UTS
         try {
             uts = Integer.parseInt(utsField.getText().trim());
             if (uts < 0 || uts > 100) {
@@ -265,7 +250,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
             return;
         }
 
-        // Validasi nilai UAS
         try {
             uas = Integer.parseInt(uasField.getText().trim());
             if (uas < 0 || uas > 100) {
@@ -277,7 +261,6 @@ public class FormNilaiAkhir extends javax.swing.JFrame {
             return;
         }
 
-        // Simpan jika semua data valid
         
         NilaiMahasiswa mahasiswa = new NilaiMahasiswa(
                 npm, nama, tugas, uts, uas
